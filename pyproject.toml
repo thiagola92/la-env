@@ -1,15 +1,19 @@
-[tool.poetry]
+
+[project]
 name = "la-env"
 version = "0.1.0"
 description = "Check environment variables"
-authors = ["thiagola92 <thiagola92@gmail.com>"]
+authors = [
+    {name = "thiagola92", email = "thiagola92@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.11"
 readme = "README.md"
-packages = [{include = "la_env", from = "src"}]
-
-[tool.poetry.dependencies]
-python = "^3.11"
-
+license = {text = "MIT"}
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm.dev-dependencies]
+dev = []
